@@ -4,25 +4,24 @@ public class Main {
         System.out.println(swapString("abcd"));
     }
 
-    public static String findMiddle(String line){
-       String newLine ="";
-        if(line.length()%2==0){
-            newLine+=line.charAt(line.length()/2-1);
+    public static String findMiddle(String line) {
+        String newLine = "";
+        if (line.length() % 2 == 0) {
+            newLine += line.charAt(line.length() / 2 - 1);
         }
-        newLine +=line.charAt(line.length()/2);
+        newLine += line.charAt(line.length() / 2);
         return newLine;
     }
 
-    public static String swapString(String line){
+    public static String swapString(String line) {
         String newLine = "";
-        if(line.length()%2==0){
-            newLine+= line.substring(line.length()/2);
+        if (line.length() % 2 == 0) {
+            newLine += line.substring(line.length() / 2);
+        } else {
+            newLine += line.substring(line.length() / 2 + 1);
+            newLine += line.charAt(line.length() / 2);
         }
-        else{
-            newLine+= line.substring(line.length()/2+1);
-            newLine+=line.charAt(line.length()/2);
-        }
-        newLine+=line.substring(0,line.length()/2);
+        newLine += line.substring(0, line.length() / 2);
         return newLine;
     }
 }
